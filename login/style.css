@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+*{
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: lightskyblue;
+    height: 100vh;
+    font-family: "Oswald", sans-serif;
+    
+}
+
+.conteudo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90%;
+    /* left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto; */
+}
+
+.container{
+    background-color: #4682B4;
+    width: 350px;
+    height: auto;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    border-radius: 30px;
+    border: solid;
+    gap: 5px;
+    border-color: white;
+    box-shadow: 5px 5px;
+    border-width: 2.2px;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.form label{
+    color: #efefef;
+    width: 240px;
+    font-weight: bold;
+}
+
+.btn{
+    width: 200px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;    
+    padding: 3px;
+    border-radius: 25px;
+    border: 1px solid black;
+    font-family: "Oswald", sans-serif;
+    
+}
+.btn:hover{
+    background-color: #2f5f86;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 0.3s;
+    border-color: #efefef;
+    color: #efefef;
+}
+
+.btnclick{
+    width: 200px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;    
+    padding: 3px;
+    background-color: #efefef;
+    border-radius: 25px;
+    border: 1px solid black;
+    font-family: "Oswald", sans-serif;
+}
+
+.titulo{
+    color: #efefef;
+    text-align: center;
+    padding: 40px;
+}
+.input{
+    border-radius: 9px;
+    width: 250px;
+    padding: 3px;   
+    border-color: 1px solid black;
+}

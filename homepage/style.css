@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body{
+    background: lightskyblue;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center;
+    align-items: center; */ 
+    height: 100vh;
+    font-family: "Oswald", sans-serif;
+}
+
+.cabecalho{
+    background-color: #efefef;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border: 2px solid black;
+    padding: 12px;
+}
+
+.cabecalho nav{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: center;
+}
+
+.conteudo{
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.container{
+    background-color: #4682B4;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+    border: solid;
+    border-color: #efefef;
+    box-shadow: 5px 5px;
+    border-width: 2.5px;
+    border-radius: 30px;
+}
+
+.obtns{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.btn{
+    width: 120px;
+    height: 30px;
+    border-radius: 13px;
+    border-style: solid;
+    font-family: "Oswald", sans-serif;
+}
+.btn:hover{
+    background-color: #2f5f86;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 0.8s;
+    border-color: #efefef;
+    color: #efefef;
+}
+
+.titulo{
+    color: #efefef;
+}
