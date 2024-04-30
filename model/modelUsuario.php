@@ -42,15 +42,17 @@ Class ModelTeste{
     public function Listar(){
         $retorno = ["status" => 0, "dados" => null];
         try{
-            $stmt = $this->db->fetch('SELECT * FROM usuarios inner join adm on usuarios.id = adm.id_usuario;');
-            $dado = $stmt->fetchAll();
+            $stmt = $this->db->prepare('SELECT * FROM usuarios inner join adm on usuarios.id = adm.id_usuario;');
             $stmt->execute();
+            $dado = $stmt->fetchAll();
             $retorno["status"] = 1;
             $retorno["dados"] = $dado;
         }
         catch(PDOException $ex){
             echo 'Erro ao consultar '. $ex->getMessage();
         }
+
+        return $retorno;
 
     }
 
