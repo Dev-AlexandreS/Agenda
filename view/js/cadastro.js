@@ -31,7 +31,7 @@ btnEnviar.addEventListener('click', async function(event){
         })
     }
 
-    const response = await fetch("../controller/ControllerCad.php", config)
+    const response = await fetch("../../controller/ControllerCad.php", config)
     const require = await response.json()
     
     if(require.status == 1){

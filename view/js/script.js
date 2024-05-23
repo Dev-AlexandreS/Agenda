@@ -23,12 +23,12 @@ btnEntrar.addEventListener('click', async function (event){
         })
     }
     
-    const response = await fetch('../controller/ControllerLogin.php', config)
+    const response = await fetch('../../controller/ControllerLogin.php', config)
     const require = await response.json()
     
     if(require.status == 1){
         alert(require.dados.nome + "\n" + require.dados.senha)
-        window.location.href = "../mainpage/contatos.php"
+        window.location.href = "../consulta/contatos.php"
     }else{
         alert("Informações erradas, tente novamente!!")
 

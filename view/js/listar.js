@@ -1,7 +1,7 @@
 (async function teste(){
 
     
-    const response = await fetch("../controller/ControllerListar.php", {method:"get"})
+    const response = await fetch("../../controller/ControllerListar.php", {method:"get"})
     
     const require = await response.json()
     // alert('oi')
@@ -36,7 +36,7 @@
 
 
 function carregarPagina(id){
-   window.location.href = `../consulta/index.php?id=${id}`
+   window.location.href = `../alterar/index.php?id=${id}`
    }
 
         

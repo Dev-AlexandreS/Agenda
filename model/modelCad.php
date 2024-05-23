@@ -9,6 +9,7 @@ class ModelCad
     public $email = null;
     public $tel = null;
     public $senha = null;
+    public $id = null;
 
     public function __construct($conexaoBanco)
     {
@@ -38,4 +39,21 @@ class ModelCad
         return $retorno;
         
     }
+
+    public function ListarPeloId(){
+        $retorno = ["status" => 0, "dados" => null];
+        try{
+            $stmt = $this->db->pdo->prepare('SELECT * FROM usuarios inner join adm on usuarios.id = adm.id_usuario;');
+            $stmt->execute();
+            $dado = $stmt->fetchAll();
+            $retorno["status"] = 1;
+            $retorno["dados"] = $dado;
+        }
+        catch(PDOException $ex){
+            echo 'Erro ao consultar '. $ex->getMessage();
+        }
+
+        return $retorno;
+
+     }
 }
