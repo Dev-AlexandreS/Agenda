@@ -64,6 +64,7 @@ btnAlter.addEventListener('click', async (event)=>{
         alert( 
             "Deu certo!!!"
         )
+        window.location.href = "../"
     }
 
 

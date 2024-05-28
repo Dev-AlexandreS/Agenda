@@ -91,11 +91,11 @@ Class ModelTeste{
 
         try {
 
-            $stmt = $this->db->prepare('UPDATE usuarios SET nome=:nome, data_nasc=:datanasc, email=:email, telefone= :tel  WHERE id = :id;
-            UPDATE adm SET senha = :senha  WHERE id = :id;');
+            $stmt = $this->db->prepare('UPDATE usuarios SET nome = :nome , data_nasc = :datanasc , email = :email , telefone = :tel  WHERE id = :id; 
+            UPDATE adm SET senha = :senha  WHERE id_usuario = :id;');
 
             $stmt->bindValue(':nome', $this->nome);
-            $stmt->bindValue(':dataNasc', $this->dataNasc);
+            $stmt->bindValue(':datanasc', $this->dataNasc);
             $stmt->bindValue(':email', $this->email);
             $stmt->bindValue(':tel', $this->tel);
             $stmt->bindValue(':senha', $this->senha);

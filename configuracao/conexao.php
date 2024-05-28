@@ -3,7 +3,7 @@
 class Conexao{
 
     public $host = "localhost:3308";
-    public $nomeBanco = "crudAgenda";
+    public $nomeBanco = "crudagenda";
     public $usuarioBanco = "root";
     public $senhaUsuario = "";
     public $pdo = null;
