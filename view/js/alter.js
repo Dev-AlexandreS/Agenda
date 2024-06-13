@@ -62,9 +62,9 @@ btnAlter.addEventListener('click', async (event)=>{
 
     if (response.status == 1){
         alert( 
-            "Deu certo!!!"
+            "Alterado"
         )
-        window.location.href = "../"
+        window.location.href = "../consulta/contatos.php"
     }
 
 

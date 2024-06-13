@@ -88,9 +88,9 @@ Class ModelTeste{
     public function Alter(){
 
         $retorno = ['status' => 0];
-
+        
         try {
-
+            
             $stmt = $this->db->prepare('UPDATE usuarios SET nome = :nome , data_nasc = :datanasc , email = :email , telefone = :tel  WHERE id = :id; 
             UPDATE adm SET senha = :senha  WHERE id_usuario = :id;');
 
@@ -100,20 +100,42 @@ Class ModelTeste{
             $stmt->bindValue(':tel', $this->tel);
             $stmt->bindValue(':senha', $this->senha);
             $stmt->bindValue(':id', $this->id);
-            
+
             $stmt->execute();
 
             $retorno['status'] = 1;
 
+            } catch (PDOException $ex) {
+    
+            echo 'Erro ao alterar: ' . $ex->getMessage();
+            }
+    
+    return $retorno;
+    
+    }
+    public function Deletar(){
+        
+        $retorno = ['status' => 0];
+
+        try {
+            
+            $stmt = $this->db->prepare('DELETE FROM adm WHERE id_usuario = :id;
+                                        DELETE FROM usuarios WHERE id = :id;');
+            
+            $stmt->bindValue(':id', $this->id);
+            
+            $stmt->execute();
+            
+            $retorno['status'] = 1;
+
         } catch (PDOException $ex) {
 
-            echo 'Erro ao alterar: ' . $ex->getMessage();
+            echo 'Erro ao deletar: ' . $ex->getMessage();
         }
 
         return $retorno;
 
     }
-
 
 }
 
